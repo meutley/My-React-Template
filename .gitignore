@@ -1,0 +1,8 @@
+# Node
+node_modules
+
+# Logs
+npm-debug.log*
+
+# Webpack output
+src/client/public
