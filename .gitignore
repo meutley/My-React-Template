@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Node
 node_modules
 
@@ -7,7 +6,7 @@ npm-debug.log*
 
 # Webpack output
 src/client/public
-=======
+
 # Logs
 logs
 *.log
@@ -45,4 +44,3 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
->>>>>>> a50d297d4d9f63ce754482f8661b2f6f1a168851
