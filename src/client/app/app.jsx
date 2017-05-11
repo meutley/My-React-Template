@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {render} from 'react-dom';
-import {Router,Route,hashHistory} from 'react-router';
+import {Router,hashHistory} from 'react-router';
 
-import HomeIndex from '../home/components/Index.jsx';
-import AboutIndex from '../about/components/Index.jsx';
+import AppRoutes from '../routes/AppRoutes.jsx';
 
-const routes = (
-    <div>
-        <Route path="/" component={HomeIndex}/>
-        <Route path="/about" component={AboutIndex}/>
-    </div>
-);
-
-class AppContainer extends React.Component {
+class App extends React.Component {
     constructor() {
         super(...arguments);
         
@@ -37,14 +29,14 @@ class AppContainer extends React.Component {
     render () {
         return (
             <Router history={hashHistory}>
-                {routes}
+                {AppRoutes}
             </Router>
         )
     }
 }
 
-AppContainer.childContextTypes = {
+App.childContextTypes = {
     appState: PropTypes.func
 };
 
-render(<AppContainer/>, document.getElementById('app'));
+render(<App/>, document.getElementById('app'));
