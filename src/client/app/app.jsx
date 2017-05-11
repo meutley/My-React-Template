@@ -6,6 +6,13 @@ import {Router,Route,hashHistory} from 'react-router';
 import HomeIndex from '../home/components/Index.jsx';
 import AboutIndex from '../about/components/Index.jsx';
 
+const routes = (
+    <div>
+        <Route path="/" component={HomeIndex}/>
+        <Route path="/about" component={AboutIndex}/>
+    </div>
+);
+
 class AppContainer extends React.Component {
     constructor() {
         super(...arguments);
@@ -30,8 +37,7 @@ class AppContainer extends React.Component {
     render () {
         return (
             <Router history={hashHistory}>
-                <Route path="/" component={HomeIndex}/>
-                <Route path="/about" component={AboutIndex}/>
+                {routes}
             </Router>
         )
     }
