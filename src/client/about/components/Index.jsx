@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class AboutIndex extends React.Component {
     render () {
@@ -9,7 +10,7 @@ class AboutIndex extends React.Component {
 }
 
 AboutIndex.contextTypes = {
-    appState: React.PropTypes.func
+    appState: PropTypes.func
 };
 
 export default AboutIndex;

@@ -1,5 +1,7 @@
+var testEndpoint = require('./test-endpoint');
+
 module.exports = {
     init: function (app) {
-        //Define API routes
+        testEndpoint.init(app);
     }
 }

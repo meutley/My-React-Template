@@ -1,15 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import DataView from './DataView.jsx';
 
 class HomeIndex extends React.Component {
     render () {
         return (
-            <h1>Home</h1>
+            <div>
+                <h1>Home</h1>
+                <DataView/>
+            </div>
         )
     }
 }
 
 HomeIndex.contextTypes = {
-    appState: React.PropTypes.func
+    appState: PropTypes.func
 };
 
 export default HomeIndex;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {render} from 'react-dom';
 import {Router,Route,hashHistory} from 'react-router';
 
@@ -6,6 +7,12 @@ import HomeIndex from '../home/components/Index.jsx';
 import AboutIndex from '../about/components/Index.jsx';
 
 class AppContainer extends React.Component {
+    constructor() {
+        super(...arguments);
+        
+        this.state = {};
+    }
+
     appState(obj) {
         if (typeof obj === 'string') {
             return this.state[obj];
@@ -31,7 +38,7 @@ class AppContainer extends React.Component {
 }
 
 AppContainer.childContextTypes = {
-    appState: React.PropTypes.func
+    appState: PropTypes.func
 };
 
 render(<AppContainer/>, document.getElementById('app'));
